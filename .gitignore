@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+.env*.local
+.DS_Store
+*.log
+
+# Supabase CLI local state (not the migrations/seed — those are checked in)
+supabase/.temp
+supabase/.branches

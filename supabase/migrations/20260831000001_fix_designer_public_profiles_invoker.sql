@@ -1,0 +1,27 @@
+-- LILIRVE — Phase 7 (full-site audit): fix designer_public_profiles' security_invoker setting.
+--
+-- Bug found this phase: designer_public_profiles (20260829180004_designer_verification_onboarding.sql)
+-- was built specifically so any caller could read "designer_profiles + is this designer approved"
+-- without hand-writing the join — its own comment calls it a "convenience read view... for pages
+-- that just need 'is this designer publicly eligible'". But it was created with
+-- security_invoker = on, which makes the view's LEFT JOIN against designer_verifications respect
+-- THAT table's RLS (owner-or-admin-only, by 20260829180013_rls.sql's deliberate design, to keep
+-- review notes/rejection reasons private). For any caller who is neither the designer themselves
+-- nor an admin — i.e. every customer and every anonymous visitor, the exact audience this view
+-- exists for — the joined verification row is invisible, so `v.overall_status` reads NULL and
+-- `coalesce(v.overall_status = 'approved', false)` always evaluates to false. The view has been
+-- unusable for its own stated purpose since Phase 1, and (having never been wired into any actual
+-- query — grep confirms zero callers) the bug went unnoticed until this phase built the first real
+-- consumers.
+--
+-- Fix: flip security_invoker off. This is safe, not a general RLS weakening, because:
+--   1. designer_profiles' own SELECT policy (designer_profiles_select_public) is already fully
+--      public — the `d.*` half of this view was never gated by anything.
+--   2. The view's SELECT LIST is the actual safety boundary for the `designer_verifications` half:
+--      it exposes only the derived `is_approved` boolean, never profile_review_note,
+--      identity_failure_reason, submitted_at/reviewed_at, or the granular identity_status/
+--      portfolio_status columns — those stay owner+admin-only exactly as before, because nothing
+--      selects them through this view.
+-- No RLS policy on any base table changes here at all.
+
+alter view public.designer_public_profiles set (security_invoker = off);

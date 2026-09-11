@@ -1,0 +1,87 @@
+/**
+ * Customer saved items (designer/dress/collection/project) — list + toggle. Maps the frontend's
+ * single generic `itemId` onto whichever of the four target columns customer_saved_items actually
+ * uses for that item_type (see the CHECK constraint in
+ * supabase/migrations/20260829180009_diary_and_saved_items.sql) — the frontend shape doesn't
+ * change, only how it's stored.
+ */
+
+import { NextResponse } from "next/server";
+import { createClient } from "@/lib/supabase/server";
+import { requireCustomer } from "@/lib/supabase/authorization";
+import { errorResponse } from "@/lib/supabase/errors";
+import { mapSavedItem } from "@/lib/customer/data";
+import type { TablesInsert } from "@/lib/supabase/types";
+
+export const dynamic = "force-dynamic";
+
+type SavedItemType = "designer" | "dress" | "collection" | "project";
+const TARGET_COLUMN: Record<SavedItemType, "designer_id" | "dress_id" | "collection_id" | "project_id"> = {
+  designer: "designer_id",
+  dress: "dress_id",
+  collection: "collection_id",
+  project: "project_id",
+};
+
+export async function GET() {
+  try {
+    const ctx = await requireCustomer();
+    const supabase = createClient();
+
+    const { data, error } = await supabase
+      .from("customer_saved_items")
+      .select("*")
+      .eq("customer_id", ctx.customerId)
+      .order("created_at", { ascending: false });
+    if (error) throw error;
+
+    return NextResponse.json({ status: "ok", items: (data ?? []).map(mapSavedItem) });
+  } catch (err) {
+    return errorResponse(err, "api.savedItems.list");
+  }
+}
+
+/** Toggles save state for one item — mirrors the existing toggleSavedItem mock behavior (save if
+ *  not saved, unsave if already saved) in one call, since that's the only way the frontend uses it
+ *  (a single heart-icon button, never separate save/unsave actions). */
+export async function POST(request: Request) {
+  try {
+    const ctx = await requireCustomer();
+    const body = await request.json().catch(() => null);
+    const itemType = body?.itemType as SavedItemType | undefined;
+    const itemId = typeof body?.itemId === "string" ? body.itemId : "";
+    if (!itemType || !TARGET_COLUMN[itemType] || !itemId) {
+      return NextResponse.json({ status: "error", message: "itemType and itemId are required." }, { status: 400 });
+    }
+
+    const column = TARGET_COLUMN[itemType];
+    const supabase = createClient();
+
+    const { data: existing, error: findError } = await supabase
+      .from("customer_saved_items")
+      .select("id")
+      .eq("customer_id", ctx.customerId)
+      .eq("item_type", itemType)
+      .eq(column, itemId)
+      .maybeSingle();
+    if (findError) throw findError;
+
+    if (existing) {
+      const { error: deleteError } = await supabase.from("customer_saved_items").delete().eq("id", existing.id);
+      if (deleteError) throw deleteError;
+      return NextResponse.json({ status: "ok", saved: false });
+    }
+
+    const insert: TablesInsert<"customer_saved_items"> = {
+      customer_id: ctx.customerId,
+      item_type: itemType,
+      [column]: itemId,
+    };
+    const { error: insertError } = await supabase.from("customer_saved_items").insert(insert);
+    if (insertError) throw insertError;
+
+    return NextResponse.json({ status: "ok", saved: true });
+  } catch (err) {
+    return errorResponse(err, "api.savedItems.toggle");
+  }
+}
