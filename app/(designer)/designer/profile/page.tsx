@@ -184,7 +184,7 @@ export default function DesignerProfilePage() {
         {completedCount > 0 && (
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-container text-primary-on-container text-sm">
             <CheckCircle2 size={16} />
-            <span>{completedCount} Completed on LILIRVE</span>
+            <span>{completedCount} Completed on HRUNA</span>
           </div>
         )}
       </div>
@@ -208,13 +208,13 @@ export default function DesignerProfilePage() {
         {tab === "verification" && verification && (
           <div className="flex flex-col gap-4">
             <p className="text-sm text-ink-variant mb-1">
-              LILIRVE uses separate badges for separate facts — each one means something specific.
+              HRUNA uses separate badges for separate facts — each one means something specific.
             </p>
 
             <VerificationRow
               icon={ShieldCheck}
               title="Identity Verified"
-              description="LILIRVE has verified this person's identity."
+              description="HRUNA has verified this person's identity."
               status={verification.identityStatus}
               positive={verification.identityStatus === "verified"}
               pending={verification.identityStatus === "pending"}
@@ -222,7 +222,7 @@ export default function DesignerProfilePage() {
             <VerificationRow
               icon={CheckCircle2}
               title="Portfolio Reviewed"
-              description="LILIRVE has reviewed this designer's submitted portfolio."
+              description="HRUNA has reviewed this designer's submitted portfolio."
               status={verification.portfolioStatus}
               positive={verification.portfolioStatus === "approved"}
               pending={verification.portfolioStatus === "submitted" || verification.portfolioStatus === "under_review"}
@@ -237,7 +237,7 @@ export default function DesignerProfilePage() {
             />
 
             <p className="text-xs text-outline mt-2">
-              Only LILIRVE administrators can review and approve verification submissions — this can't be changed from your account.
+              Only HRUNA administrators can review and approve verification submissions — this can't be changed from your account.
             </p>
           </div>
         )}
@@ -247,7 +247,7 @@ export default function DesignerProfilePage() {
             <div className="flex items-start gap-3 p-4 rounded-md bg-surface-low border border-outline-variant">
               <ShieldCheck size={18} className="text-primary shrink-0 mt-0.5" />
               <p className="text-sm text-ink-variant">
-                LILIRVE uses passwordless email sign-in — we email you a one-time code each time you sign in, so there's no
+                HRUNA uses passwordless email sign-in — we email you a one-time code each time you sign in, so there's no
                 password to manage or update.
               </p>
             </div>

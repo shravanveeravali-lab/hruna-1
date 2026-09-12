@@ -80,7 +80,7 @@ export function SubscriptionPageContent({
         currency: checkoutData.currency,
         name: brandLabel,
         description: checkoutData.planName,
-        theme: { color: "#7c3aed" },
+        theme: { color: "#9C5347" },
         handler: async (response: { razorpay_order_id: string; razorpay_payment_id: string; razorpay_signature: string }) => {
           setBusy("verifying");
           try {
@@ -143,14 +143,14 @@ export function SubscriptionPageContent({
 
         <p className="text-label-md text-outline mb-2">SUBSCRIPTION</p>
         <h1 className="text-headline-md mb-8">
-          {role === "customer" ? "Your LILIRVE membership" : "Your LILIRVE Studio membership"}
+          {role === "customer" ? "Your HRUNA membership" : "Your HRUNA Studio membership"}
         </h1>
 
         {!enforced && (
           <div className="flex items-center gap-3 p-4 rounded-md bg-primary-container/40 mb-8">
             <ShieldCheck className="text-primary shrink-0" size={20} />
             <p className="text-sm text-ink-variant">
-              Subscriptions are currently unavailable / not required. You have full access to LILIRVE at no cost right now.
+              Subscriptions are currently unavailable / not required. You have full access to HRUNA at no cost right now.
             </p>
           </div>
         )}
@@ -201,7 +201,7 @@ export function SubscriptionPageContent({
         )}
 
         <LinkButton href={backHref} variant="secondary" className="w-full justify-center">
-          Continue to {role === "customer" ? "LILIRVE" : "Dashboard"}
+          Continue to {role === "customer" ? "HRUNA" : "Dashboard"}
         </LinkButton>
       </div>
     </div>

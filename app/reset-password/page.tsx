@@ -20,7 +20,7 @@ export default async function ResetPasswordPage() {
     <AuthShell>
       <PasswordForm
         heading="Reset your password"
-        description="Choose a new password for your LILIRVE account."
+        description="Choose a new password for your HRUNA account."
         submitLabel="Reset password"
         onSuccessRedirect="/home"
       />

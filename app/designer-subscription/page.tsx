@@ -14,7 +14,7 @@ export default async function DesignerSubscriptionPage() {
     <SubscriptionPageContent
       role="designer"
       summary={summary}
-      brandLabel="LILIRVE STUDIO"
+      brandLabel="HRUNA STUDIO"
       backHref="/designer/home"
     />
   );

@@ -7,20 +7,20 @@ const sections: PolicySection[] = [
     heading: "Acceptance of these terms",
     body: (
       <p>
-        By creating an account or using LILIRVE, you agree to these Terms of Use. If you don&apos;t
-        agree, please don&apos;t use the platform. LILIRVE is operated by{" "}
+        By creating an account or using HRUNA, you agree to these Terms of Use. If you don&apos;t
+        agree, please don&apos;t use the platform. HRUNA is operated by{" "}
         <strong>[LEGAL ENTITY NAME TO BE INSERTED]</strong>.
       </p>
     ),
   },
   {
-    id: "what-lilirve-is",
-    heading: "What LILIRVE is",
+    id: "what-hruna-is",
+    heading: "What HRUNA is",
     body: (
       <p>
-        LILIRVE connects customers with independent fashion designers, tailors, and boutiques,
+        HRUNA connects customers with independent fashion designers, tailors, and boutiques,
         and facilitates the collaboration between them — from a customer&apos;s initial request
-        through a designer&apos;s proposal, an active project, and completion. LILIRVE provides the
+        through a designer&apos;s proposal, an active project, and completion. HRUNA provides the
         platform; the resulting creative work and any agreement about it is between the customer
         and the designer. See the{" "}
         <Link href="/collaboration-policy" className="text-primary hover:underline">
@@ -35,8 +35,8 @@ const sections: PolicySection[] = [
     heading: "Eligibility",
     body: (
       <p>
-        You must be able to form a legally binding agreement to use LILIRVE. If you&apos;re using
-        LILIRVE on behalf of a studio or business, you confirm you&apos;re authorized to do so.
+        You must be able to form a legally binding agreement to use HRUNA. If you&apos;re using
+        HRUNA on behalf of a studio or business, you confirm you&apos;re authorized to do so.
       </p>
     ),
   },
@@ -51,7 +51,7 @@ const sections: PolicySection[] = [
           under your account. Notify us promptly if you believe your account has been compromised.
         </p>
         <p>
-          One identity can hold both a customer account and a designer account — LILIRVE doesn&apos;t
+          One identity can hold both a customer account and a designer account — HRUNA doesn&apos;t
           require duplicate registrations for each role.
         </p>
       </>
@@ -76,8 +76,8 @@ const sections: PolicySection[] = [
       <p>
         As a designer, you maintain a studio profile, respond to and browse fashion requests, send
         proposals, deliver projects, and message with customers. Designer accounts go through a
-        LILIRVE verification review (identity and portfolio) before certain visibility/eligibility
-        is granted — only LILIRVE administrators can approve verification; it can&apos;t be
+        HRUNA verification review (identity and portfolio) before certain visibility/eligibility
+        is granted — only HRUNA administrators can approve verification; it can&apos;t be
         self-certified.
       </p>
     ),
@@ -150,7 +150,7 @@ const sections: PolicySection[] = [
     body: (
       <p>
         You retain ownership of content you upload (photos, portfolio work, diary entries, etc.)
-        and are responsible for having the right to share it. By uploading, you grant LILIRVE a
+        and are responsible for having the right to share it. By uploading, you grant HRUNA a
         limited license to host, store, and display that content as needed to operate the
         platform. Full detail is in the{" "}
         <Link href="/content-policy" className="text-primary hover:underline">
@@ -165,7 +165,7 @@ const sections: PolicySection[] = [
     heading: "Prohibited conduct",
     body: (
       <>
-        <p>You agree not to, on or through LILIRVE:</p>
+        <p>You agree not to, on or through HRUNA:</p>
         <ul className="list-disc pl-5 flex flex-col gap-1.5">
           <li>Harass, threaten, or abuse another user.</li>
           <li>Commit or attempt fraud.</li>
@@ -189,7 +189,7 @@ const sections: PolicySection[] = [
     heading: "Moderation & reporting",
     body: (
       <p>
-        LILIRVE administrators may review and act on reported or flagged issues, including content
+        HRUNA administrators may review and act on reported or flagged issues, including content
         removal and account action. See the{" "}
         <Link href="/reporting-and-disputes" className="text-primary hover:underline">
           Reporting, Complaints &amp; Disputes Policy
@@ -219,7 +219,7 @@ const sections: PolicySection[] = [
     body: (
       <p>
         If a disagreement arises between a customer and a designer, first try resolving it directly
-        through messaging. For issues that need LILIRVE&apos;s involvement, see{" "}
+        through messaging. For issues that need HRUNA&apos;s involvement, see{" "}
         <Link href="/reporting-and-disputes" className="text-primary hover:underline">
           Reporting, Complaints &amp; Disputes
         </Link>
@@ -232,7 +232,7 @@ const sections: PolicySection[] = [
     heading: "Platform availability",
     body: (
       <p>
-        We aim to keep LILIRVE available and reliable, but don&apos;t guarantee uninterrupted
+        We aim to keep HRUNA available and reliable, but don&apos;t guarantee uninterrupted
         access — the platform may be unavailable for maintenance, updates, or reasons outside our
         control.
       </p>
@@ -243,7 +243,7 @@ const sections: PolicySection[] = [
     heading: "Third-party services",
     body: (
       <p>
-        LILIRVE relies on third-party infrastructure providers (such as Supabase for
+        HRUNA relies on third-party infrastructure providers (such as Supabase for
         authentication, database, and storage) to operate. We aren&apos;t responsible for outages
         or issues originating from those providers, though we work to minimize their impact.
       </p>
@@ -251,12 +251,12 @@ const sections: PolicySection[] = [
   },
   {
     id: "no-order-shipping",
-    heading: "What LILIRVE does not currently do",
+    heading: "What HRUNA does not currently do",
     body: (
       <p>
-        LILIRVE does not currently process customer payments, orders, checkout, shipping, delivery,
+        HRUNA does not currently process customer payments, orders, checkout, shipping, delivery,
         or returns/refunds through the platform. Any commercial arrangement for a commissioned
-        garment is between the customer and the designer directly, outside of LILIRVE&apos;s current
+        garment is between the customer and the designer directly, outside of HRUNA&apos;s current
         feature set.
       </p>
     ),
@@ -266,7 +266,7 @@ const sections: PolicySection[] = [
     heading: "Changes to these terms",
     body: (
       <p>
-        We may update these Terms as LILIRVE evolves. Material changes will be reflected by
+        We may update these Terms as HRUNA evolves. Material changes will be reflected by
         updating the &ldquo;Last updated&rdquo; date above.
       </p>
     ),
@@ -294,7 +294,7 @@ export default function TermsOfUsePage() {
       lastUpdated="September 10, 2026"
       intro={
         <p>
-          These Terms govern your use of LILIRVE — a platform that facilitates connection and
+          These Terms govern your use of HRUNA — a platform that facilitates connection and
           collaboration between customers and independent fashion designers.
         </p>
       }

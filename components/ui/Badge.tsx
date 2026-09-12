@@ -30,7 +30,7 @@ export function Avatar({
         <BadgeCheck
           className="absolute -bottom-0.5 -right-0.5 text-primary bg-white rounded-full"
           size={Math.max(14, size * 0.32)}
-          fill="#f8e1ee"
+          fill="#F5E0DB"
         />
       )}
     </div>

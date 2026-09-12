@@ -4,11 +4,11 @@ import { PolicyPage, type PolicySection } from "@/components/layout/PolicyPage";
 const sections: PolicySection[] = [
   {
     id: "how-reviews-work",
-    heading: "How reviews work on LILIRVE",
+    heading: "How reviews work on HRUNA",
     body: (
       <>
         <p>
-          Reviews on LILIRVE are written by customers about a specific completed project — a
+          Reviews on HRUNA are written by customers about a specific completed project — a
           customer can leave one review per project, once that project is marked completed. A
           review includes a rating and written text, and is shown publicly on the reviewed
           designer&apos;s studio page.
@@ -26,7 +26,7 @@ const sections: PolicySection[] = [
     body: (
       <ul className="list-disc pl-5 flex flex-col gap-1.5">
         <li>Reviews should reflect your genuine experience with that specific project.</li>
-        <li>Reviews must relate to an actual LILIRVE project or interaction.</li>
+        <li>Reviews must relate to an actual HRUNA project or interaction.</li>
         <li>No fake reviews.</li>
         <li>No review manipulation, including coordinated review campaigns.</li>
         <li>No incentivized dishonest reviews.</li>
@@ -45,7 +45,7 @@ const sections: PolicySection[] = [
         Since reviews are currently immutable and there&apos;s no in-app &ldquo;report a
         review&rdquo; button, if a review violates this policy, contact{" "}
         <Link href="/support" className="text-primary hover:underline">Contact Support</Link> and a
-        LILIRVE administrator can review it — see{" "}
+        HRUNA administrator can review it — see{" "}
         <Link href="/reporting-and-disputes" className="text-primary hover:underline">
           Reporting, Complaints &amp; Disputes
         </Link>{" "}

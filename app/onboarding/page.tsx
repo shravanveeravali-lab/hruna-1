@@ -15,7 +15,7 @@ const STEPS = ["Profile", "Location", "Style"];
 const CATEGORIES = ["Bridal", "Occasion Wear", "Ready-to-Wear", "Menswear", "Sustainable Fashion"];
 const OCCASIONS = ["Wedding", "Reception", "Festive", "Work", "Casual", "Party"];
 
-// Real data (Phase 9 fix) — "Finish & Explore LILIRVE" used to just router.push("/home") with
+// Real data (Phase 9 fix) — "Finish & Explore HRUNA" used to just router.push("/home") with
 // nothing ever saved: the name/city/avatar collected across this wizard was silently discarded,
 // so a brand-new customer completing onboarding ended up with NO customer_profiles row at all
 // (every other real feature that requires one — requests, diary, saved items — would then reject
@@ -64,7 +64,7 @@ export default function OnboardingPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: name.trim() || "LILIRVE Customer",
+          name: name.trim() || "HRUNA Customer",
           city: city.trim(),
           ...(avatarFileId ? { avatarFileId } : {}),
         }),
@@ -90,7 +90,7 @@ export default function OnboardingPage() {
   return (
     <div className="min-h-screen flex flex-col items-center py-16 px-6">
       <div className="w-full max-w-lg">
-        <p className="font-display text-2xl text-center mb-10">LILIRVE</p>
+        <p className="font-display text-2xl text-center mb-10">HRUNA</p>
         <Stepper steps={STEPS} currentIndex={step} />
 
         <div className="mt-12">
@@ -198,7 +198,7 @@ export default function OnboardingPage() {
             <span />
           )}
           <Button onClick={next} disabled={saving || (step === 0 && !name.trim()) || (step === 1 && !city.trim())}>
-            {saving ? <><Loader2 size={14} className="animate-spin" /> Finishing…</> : step === STEPS.length - 1 ? "Finish & Explore LILIRVE" : "Continue"}
+            {saving ? <><Loader2 size={14} className="animate-spin" /> Finishing…</> : step === STEPS.length - 1 ? "Finish & Explore HRUNA" : "Continue"}
           </Button>
         </div>
       </div>

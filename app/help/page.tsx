@@ -28,7 +28,7 @@ const TOPICS = [
       },
       {
         q: "What does “verified” mean?",
-        a: "A verified designer has completed LILIRVE's identity and portfolio review. Only approved designers appear in search and can be sent private requests.",
+        a: "A verified designer has completed HRUNA's identity and portfolio review. Only approved designers appear in search and can be sent private requests.",
       },
     ],
   },
@@ -87,7 +87,7 @@ export default function HelpCenterPage() {
   return (
     <ContentPage eyebrow="SUPPORT" title="Help Center">
       <p>
-        Answers to common questions about using LILIRVE. Can&apos;t find what you need?{" "}
+        Answers to common questions about using HRUNA. Can&apos;t find what you need?{" "}
         <Link href="/support" className="text-primary font-medium hover:underline">
           Contact Support
         </Link>

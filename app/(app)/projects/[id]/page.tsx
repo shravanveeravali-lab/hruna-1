@@ -321,7 +321,7 @@ export default function ProjectWorkspacePage() {
                 <p className="text-sm text-ink-variant">{project.additionalPreferences}</p>
               </div>
             )}
-            <p className="text-xs text-outline mt-4">Payment is arranged directly with your designer — LILIRVE doesn't process payments.</p>
+            <p className="text-xs text-outline mt-4">Payment is arranged directly with your designer — HRUNA doesn't process payments.</p>
           </section>
 
           {/* Progress updates */}

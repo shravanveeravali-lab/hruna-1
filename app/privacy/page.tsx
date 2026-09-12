@@ -11,8 +11,8 @@ const sections: PolicySection[] = [
     body: (
       <>
         <p>
-          This Privacy Policy explains how LILIRVE collects, uses, and protects information when
-          you use the platform as a customer or as a designer. LILIRVE is operated by{" "}
+          This Privacy Policy explains how HRUNA collects, uses, and protects information when
+          you use the platform as a customer or as a designer. HRUNA is operated by{" "}
           <strong>[LEGAL ENTITY NAME TO BE INSERTED]</strong>. For privacy questions or concerns,
           see &ldquo;How to reach us&rdquo; below.
         </p>
@@ -35,7 +35,7 @@ const sections: PolicySection[] = [
           <li><strong>Saved items &amp; Fashion Diary</strong> — designers, dresses, collections, or projects you save, and any private Fashion Diary entries you create.</li>
           <li><strong>Uploaded images and files</strong> — avatars, studio images, request/project images, and verification documents, stored via our media storage provider.</li>
           <li><strong>Notification preferences</strong> — your choices about which notifications you want to receive.</li>
-          <li><strong>Authentication &amp; security information</strong> — your password is managed entirely by Supabase Auth; LILIRVE never stores or has direct access to your password.</li>
+          <li><strong>Authentication &amp; security information</strong> — your password is managed entirely by Supabase Auth; HRUNA never stores or has direct access to your password.</li>
         </ul>
         <p>
           We do not currently run dedicated behavioral analytics or third-party advertising
@@ -78,7 +78,7 @@ const sections: PolicySection[] = [
           <li>Fashion Diary entries — visible only to you, enforced at the database level.</li>
           <li>Saved items and notification preferences.</li>
           <li>Messages — visible only to the two participants of a conversation.</li>
-          <li>Verification documents — accessible only to you and LILIRVE administrators.</li>
+          <li>Verification documents — accessible only to you and HRUNA administrators.</li>
         </ul>
       </>
     ),
@@ -92,7 +92,7 @@ const sections: PolicySection[] = [
         verification documents) are stored in dedicated, access-controlled storage buckets. Some
         buckets (like avatars and studio images) are public by design, since they&apos;re meant to
         be seen by other users; others (like verification documents and Fashion Diary images) are
-        private and access-restricted to you and, where relevant, LILIRVE administrators. File
+        private and access-restricted to you and, where relevant, HRUNA administrators. File
         size and type are restricted at the storage level.
       </p>
     ),
@@ -115,7 +115,7 @@ const sections: PolicySection[] = [
     heading: "Authentication & security",
     body: (
       <p>
-        Your password is managed entirely by Supabase Auth using industry-standard hashing; LILIRVE
+        Your password is managed entirely by Supabase Auth using industry-standard hashing; HRUNA
         application code never sees or stores it in plain text. Access to your data is additionally
         enforced at the database level through Row Level Security — meaning even a technical error
         elsewhere in the application cannot expose your private data to another user, because the
@@ -174,7 +174,7 @@ const sections: PolicySection[] = [
     heading: "Payments",
     body: (
       <p>
-        LILIRVE does not currently process payments on the customer side. Where
+        HRUNA does not currently process payments on the customer side. Where
         subscription-related records exist in the system for designer accounts, they are not
         connected to live billing today.
       </p>
@@ -185,7 +185,7 @@ const sections: PolicySection[] = [
     heading: "Changes to this policy",
     body: (
       <p>
-        We may update this Privacy Policy as LILIRVE evolves. Material changes will be reflected
+        We may update this Privacy Policy as HRUNA evolves. Material changes will be reflected
         by updating the &ldquo;Last updated&rdquo; date above.
       </p>
     ),
@@ -213,7 +213,7 @@ export default function PrivacyPolicyPage() {
       lastUpdated="September 10, 2026"
       intro={
         <p>
-          This policy explains what information LILIRVE collects, why, and how it&apos;s used —
+          This policy explains what information HRUNA collects, why, and how it&apos;s used —
           based on how the platform actually works today, not generic boilerplate.
         </p>
       }

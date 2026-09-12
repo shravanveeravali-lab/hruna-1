@@ -31,7 +31,7 @@ export function PolicyPage({
     <div className="min-h-screen flex flex-col">
       <div className="container-editorial py-16 flex-1">
         <Link href="/" className="font-display text-2xl inline-block mb-12">
-          LILIRVE
+          HRUNA
         </Link>
         <div className="max-w-3xl">
           <p className="text-label-md text-outline mb-2">{eyebrow}</p>

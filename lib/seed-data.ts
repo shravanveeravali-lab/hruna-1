@@ -79,7 +79,7 @@ export const seedDesigners: Designer[] = [
     story:
       "Atelier Meera began in a small Jaipur workshop in 2013, built on the belief that a bride's dress should carry her family's story in every stitch. Today the studio blends heritage handwork with modern, wearable silhouettes.",
     highlights: [
-      { image: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800&q=80", caption: "Hand-embroidered detailing" },
+      { image: "/images/stitch/couture-gown-atelier.png", caption: "Hand-embroidered detailing" },
       { image: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=800&q=80", caption: "The Jaipur atelier floor" },
       { image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&q=80", caption: "Draping a reception gown" },
     ],
@@ -208,7 +208,7 @@ export const seedDesigners: Designer[] = [
     verified: false,
     available: false,
     bio: "Self-taught tailor with 8 years of hands-on experience running a home-based stitching business — no formal fashion degree.",
-    story: "Ramesh learned tailoring from his father and has run a home-based tailoring business in Hyderabad for eight years, taking on formalwear and everyday alterations for the neighborhood before joining LILIRVE.",
+    story: "Ramesh learned tailoring from his father and has run a home-based tailoring business in Hyderabad for eight years, taking on formalwear and everyday alterations for the neighborhood before joining HRUNA.",
     highlights: [],
     meetTheDesigner: [],
     openingHours: "Mon–Sat, 10:00 AM – 7:00 PM",
@@ -303,7 +303,7 @@ export const seedCollections: Collection[] = [
     designerId: "des-1",
     name: "Nur — Winter Bridal",
     category: "Bridal",
-    coverImage: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=900&q=80",
+    coverImage: "/images/stitch/couture-gown-atelier.png",
     description: "A capsule of ivory and gold lehengas inspired by Mughal-era miniature paintings.",
     dressIds: ["dr-1", "dr-2"],
   },
@@ -333,7 +333,7 @@ export const seedDresses: Dress[] = [
     designerId: "des-1",
     collectionId: "col-1",
     name: "Nur Ivory Lehenga",
-    images: ["https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=900&q=80", "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=900&q=80"],
+    images: ["/images/stitch/couture-gown-atelier.png", "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=900&q=80"],
     description: "Hand-embroidered ivory silk lehenga with gold zardozi and a dupatta trained for a cathedral train.",
     price: 185000,
     available: true,
@@ -405,7 +405,7 @@ export const seedRequests: FashionRequest[] = [
     measurements: { bust: "36 in", waist: "30 in", hip: "39 in", length: "44 in" },
     inspirationImages: [
       "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=700&q=80",
-      "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=700&q=80",
+      "/images/stitch/dress-form-draping.png",
     ],
     description:
       "Soft pastel gown with a structured waist, delicate embellishment along the neckline, and a flattering silhouette for an evening reception. Would love it to feel light and easy to dance in.",
@@ -537,7 +537,7 @@ export const seedProjects: Project[] = [
         id: "upd-3",
         stage: "Stitching",
         note: "Initial stitching completed on the bodice and skirt panels.",
-        images: ["https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=700&q=80"],
+        images: ["/images/stitch/dress-form-draping.png"],
         date: "2026-09-08",
       },
     ],
@@ -693,7 +693,7 @@ export const seedDisputes: Dispute[] = [
     createdAt: "2026-08-22T10:15:00.000Z",
     updatedAt: "2026-08-23T09:00:00.000Z",
     notes: [
-      { id: "note-1", text: "Reached out to Atelier Meera for a revised fitting date; awaiting response.", adminName: "LILIRVE Admin", timestamp: "2026-08-23T09:00:00.000Z" },
+      { id: "note-1", text: "Reached out to Atelier Meera for a revised fitting date; awaiting response.", adminName: "HRUNA Admin", timestamp: "2026-08-23T09:00:00.000Z" },
     ],
   },
   {
@@ -717,8 +717,8 @@ export const seedDisputes: Dispute[] = [
     createdAt: "2026-07-30T12:00:00.000Z",
     updatedAt: "2026-08-02T11:20:00.000Z",
     notes: [
-      { id: "note-2", text: "Confirmed no fabric had been purchased yet. Advised designer to process the refund.", adminName: "LILIRVE Admin", timestamp: "2026-08-01T14:00:00.000Z" },
-      { id: "note-3", text: "Refund confirmed by designer. Marking resolved.", adminName: "LILIRVE Admin", timestamp: "2026-08-02T11:20:00.000Z" },
+      { id: "note-2", text: "Confirmed no fabric had been purchased yet. Advised designer to process the refund.", adminName: "HRUNA Admin", timestamp: "2026-08-01T14:00:00.000Z" },
+      { id: "note-3", text: "Refund confirmed by designer. Marking resolved.", adminName: "HRUNA Admin", timestamp: "2026-08-02T11:20:00.000Z" },
     ],
   },
   {
@@ -731,7 +731,7 @@ export const seedDisputes: Dispute[] = [
     createdAt: "2026-06-10T09:30:00.000Z",
     updatedAt: "2026-06-12T17:00:00.000Z",
     notes: [
-      { id: "note-4", text: "Both sides confirmed the misunderstanding is cleared up. Closing.", adminName: "LILIRVE Admin", timestamp: "2026-06-12T17:00:00.000Z" },
+      { id: "note-4", text: "Both sides confirmed the misunderstanding is cleared up. Closing.", adminName: "HRUNA Admin", timestamp: "2026-06-12T17:00:00.000Z" },
     ],
   },
 ];
@@ -741,10 +741,10 @@ export const seedAdminNotifications: AdminNotification[] = [
   {
     id: "note-ann-1",
     title: "Scheduled maintenance — Sunday 2 AM–4 AM IST",
-    message: "LILIRVE will be briefly unavailable for scheduled maintenance. Any in-progress messages and project updates are saved automatically.",
+    message: "HRUNA will be briefly unavailable for scheduled maintenance. Any in-progress messages and project updates are saved automatically.",
     audience: "all",
     createdAt: "2026-08-20T09:00:00.000Z",
-    createdBy: "LILIRVE Admin",
+    createdBy: "HRUNA Admin",
   },
   {
     id: "note-ann-2",
@@ -752,7 +752,7 @@ export const seedAdminNotifications: AdminNotification[] = [
     message: "Portfolio submissions now require at least one in-progress workshop photo alongside finished pieces. See the onboarding portfolio step for details.",
     audience: "designer",
     createdAt: "2026-08-11T13:30:00.000Z",
-    createdBy: "LILIRVE Admin",
+    createdBy: "HRUNA Admin",
   },
 ];
 

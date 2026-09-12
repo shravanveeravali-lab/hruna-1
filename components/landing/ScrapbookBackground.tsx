@@ -16,8 +16,8 @@ export function ScrapbookBackground({
   return (
     <div className={`absolute inset-0 -z-10 overflow-hidden ${bgClass} ${className}`} aria-hidden="true">
       <div className="paper-grain" />
-      {tornTop && <div className="torn-edge-top" style={{ "--torn-color": "#F7F4D5" } as React.CSSProperties} />}
-      {tornBottom && <div className="torn-edge-bottom" style={{ "--torn-color": "#F7F4D5" } as React.CSSProperties} />}
+      {tornTop && <div className="torn-edge-top" style={{ "--torn-color": "#F8F6EE" } as React.CSSProperties} />}
+      {tornBottom && <div className="torn-edge-bottom" style={{ "--torn-color": "#F8F6EE" } as React.CSSProperties} />}
     </div>
   );
 }

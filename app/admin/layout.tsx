@@ -25,7 +25,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/95 backdrop-blur">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between gap-6">
           <Link href="/admin" className="flex items-center gap-2 font-display text-lg shrink-0">
-            <ShieldCheck size={18} /> LILIRVE Admin
+            <ShieldCheck size={18} /> HRUNA Admin
           </Link>
           <nav className="hidden lg:flex items-center gap-5 overflow-x-auto no-scrollbar">
             {adminNavLinks.map((link) => (
@@ -57,7 +57,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {open && (
         <div className="fixed inset-0 z-50 bg-ink flex flex-col lg:hidden">
           <div className="flex items-center justify-between h-16 px-6 border-b border-white/10">
-            <span className="flex items-center gap-2 font-display text-lg"><ShieldCheck size={18} /> LILIRVE Admin</span>
+            <span className="flex items-center gap-2 font-display text-lg"><ShieldCheck size={18} /> HRUNA Admin</span>
             <button aria-label="Close admin menu" onClick={() => setOpen(false)} className="p-2 text-white/70">
               <X size={20} />
             </button>

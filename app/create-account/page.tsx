@@ -79,11 +79,9 @@ export default function CreateAccountPage() {
 
   return (
     <AuthShell
-      image="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=1200&q=80"
-      imageAlt="A wedding lehenga in progress on a designer's worktable"
-      quote="“LILIRVE gave my wedding lehenga a designer who understood exactly what I meant, sketch by sketch.”"
+      quote="“HRUNA gave my wedding lehenga a designer who understood exactly what I meant, sketch by sketch.”"
     >
-      <p className="text-label-md text-outline mb-2">JOIN LILIRVE</p>
+      <p className="text-label-md text-outline mb-2">JOIN HRUNA</p>
       <h1 className="text-headline-md mb-8">Create your account</h1>
       <form onSubmit={onSubmit} className="flex flex-col gap-5" noValidate>
         <Field label="Full name" htmlFor="name" required error={errors.name}>
@@ -111,12 +109,12 @@ export default function CreateAccountPage() {
           />
         </Field>
         <p className="text-xs text-outline -mt-2">
-          Create your password to secure your LILIRVE account.
+          Create your password to secure your HRUNA account.
         </p>
         <label className="flex items-start gap-2 text-sm text-ink-variant">
           <input type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} className="mt-1" />
           <span>
-            I agree to LILIRVE&apos;s{" "}
+            I agree to HRUNA&apos;s{" "}
             <Link href="/terms" className="text-primary hover:underline" target="_blank">
               Terms of Use
             </Link>{" "}

@@ -16,7 +16,7 @@ export default function ContactSupportPage() {
         <div>
           <p className="text-ink font-medium mb-1">Support is still being set up</p>
           <p className="text-sm text-ink-variant">
-            A dedicated support channel for LILIRVE isn&apos;t live yet, so we don&apos;t want to promise a
+            A dedicated support channel for HRUNA isn&apos;t live yet, so we don&apos;t want to promise a
             contact form or address that doesn&apos;t actually reach anyone. In the meantime, most
             questions about your account, requests, projects, and profile are answered in the{" "}
             <Link href="/help" className="text-primary font-medium hover:underline">

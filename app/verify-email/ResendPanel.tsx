@@ -51,7 +51,7 @@ export function ResendPanel({ email, initialError }: { email: string; initialErr
       <h1 className="text-headline-sm">We sent a verification link to your email address</h1>
       {email && <p className="text-sm text-ink font-medium">{email}</p>}
       <p className="text-sm text-ink-variant max-w-xs">
-        Please click the link in your email to continue creating your LILIRVE account.
+        Please click the link in your email to continue creating your HRUNA account.
       </p>
 
       {message && (

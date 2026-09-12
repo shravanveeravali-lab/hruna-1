@@ -14,7 +14,7 @@ export default async function CustomerSubscriptionPage() {
     <SubscriptionPageContent
       role="customer"
       summary={summary}
-      brandLabel="LILIRVE"
+      brandLabel="HRUNA"
       backHref="/home"
     />
   );

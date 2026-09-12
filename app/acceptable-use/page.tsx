@@ -12,7 +12,7 @@ const sections: PolicySection[] = [
         <Link href="/community-guidelines" className="text-primary hover:underline">
           Community Guidelines
         </Link>
-        . LILIRVE is built on Supabase, with authentication and Row Level Security enforcing that
+        . HRUNA is built on Supabase, with authentication and Row Level Security enforcing that
         every user can only access their own data (or data explicitly shared with them, like a
         conversation or a public studio page). Attempting to work around these protections is a
         violation of this policy.
@@ -26,7 +26,7 @@ const sections: PolicySection[] = [
       <ul className="list-disc pl-5 flex flex-col gap-1.5">
         <li>Attempt to gain unauthorized access to another account or to data that isn&apos;t yours.</li>
         <li>Attempt to bypass authentication or authorization controls.</li>
-        <li>Abuse LILIRVE&apos;s APIs — excessive automated requests, scraping the platform beyond normal use, or probing for vulnerabilities.</li>
+        <li>Abuse HRUNA&apos;s APIs — excessive automated requests, scraping the platform beyond normal use, or probing for vulnerabilities.</li>
         <li>Send spam or automate abusive activity (fake accounts, fake requests, fake messages).</li>
         <li>Distribute malware or malicious files through uploads or messages.</li>
         <li>Attempt to steal or harvest another user&apos;s credentials.</li>
@@ -77,7 +77,7 @@ export default function AcceptableUsePolicyPage() {
       eyebrow="LEGAL"
       title="Acceptable Use Policy"
       lastUpdated="September 10, 2026"
-      intro={<p>Rules for technical and platform-level use of LILIRVE.</p>}
+      intro={<p>Rules for technical and platform-level use of HRUNA.</p>}
       sections={sections}
     />
   );

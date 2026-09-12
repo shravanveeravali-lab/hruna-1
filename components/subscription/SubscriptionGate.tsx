@@ -27,12 +27,12 @@ export function SubscriptionGate({
       </div>
       <p className="text-label-md text-outline mb-3">SUBSCRIPTION REQUIRED</p>
       <h1 className="text-headline-md max-w-md mb-4">
-        Your {role === "customer" ? "LILIRVE" : "LILIRVE Studio"} subscription has ended
+        Your {role === "customer" ? "HRUNA" : "HRUNA Studio"} subscription has ended
       </h1>
       <p className="text-ink-variant max-w-sm mb-8">
         {plan
-          ? `Subscribe to ${plan.name} (${formatCurrency(plan.price, plan.currency)}/month) to continue using LILIRVE.`
-          : "A subscription is required to continue using LILIRVE."}
+          ? `Subscribe to ${plan.name} (${formatCurrency(plan.price, plan.currency)}/month) to continue using HRUNA.`
+          : "A subscription is required to continue using HRUNA."}
       </p>
       <LinkButton href={subscribeHref} size="lg">View Subscription</LinkButton>
     </div>

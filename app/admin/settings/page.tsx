@@ -117,7 +117,7 @@ export default function AdminSettingsPage() {
           <section className="border border-white/10 rounded-md p-6 flex flex-col gap-3">
             <p className="text-sm font-medium">About this admin panel</p>
             <p className="text-xs text-white/50 leading-relaxed">
-              LILIRVE Admin is connected to the live Supabase backend: verification, suspension, disputes,
+              HRUNA Admin is connected to the live Supabase backend: verification, suspension, disputes,
               notifications, and billing settings here read and write real database rows through authenticated,
               admin-only API routes, and every state-changing action is recorded in the admin audit log.
             </p>

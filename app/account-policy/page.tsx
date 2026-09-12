@@ -19,7 +19,7 @@ const sections: PolicySection[] = [
     heading: "Reasons an account may be restricted",
     body: (
       <ul className="list-disc pl-5 flex flex-col gap-1.5">
-        <li>Violating any LILIRVE policy.</li>
+        <li>Violating any HRUNA policy.</li>
         <li>Fraud.</li>
         <li>Abuse or harassment.</li>
         <li>Impersonation.</li>
@@ -37,7 +37,7 @@ const sections: PolicySection[] = [
       <p>
         Depending on severity: a warning, content removal, restriction of specific features,
         temporary suspension, or permanent termination. These actions are currently taken by
-        LILIRVE administrators — there isn&apos;t yet a self-service way to suspend or restrict
+        HRUNA administrators — there isn&apos;t yet a self-service way to suspend or restrict
         your own account short of deleting it (see below).
       </p>
     ),
@@ -71,7 +71,7 @@ const sections: PolicySection[] = [
     heading: "Why some records are retained",
     body: (
       <p>
-        LILIRVE&apos;s database intentionally keeps certain records — like a completed project, a
+        HRUNA&apos;s database intentionally keeps certain records — like a completed project, a
         review, or an existing dispute — tied to the account, rather than letting them be silently
         deleted along with it. This exists to protect other people&apos;s records: for example, a
         designer&apos;s completed project and the review a customer left on it shouldn&apos;t

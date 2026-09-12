@@ -42,7 +42,7 @@ export default async function PublicStudioPage({ params }: { params: { id: strin
                 <span className="flex items-center gap-1.5"><RatingDisplay value={designer.rating} /> <span className="text-outline">({designer.reviewCount})</span></span>
                 {completedCount > 0 && (
                   <span className="flex items-center gap-1.5 text-primary">
-                    <CheckCircle2 size={14} /> {completedCount} Completed on LILIRVE
+                    <CheckCircle2 size={14} /> {completedCount} Completed on HRUNA
                   </span>
                 )}
                 {isTrustedProfessional && (

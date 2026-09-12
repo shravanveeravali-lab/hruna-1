@@ -161,7 +161,7 @@ export default function DesignerHomePage() {
         <div className="rounded-lg bg-primary-container p-10 md:p-12 flex flex-col md:flex-row items-center gap-8 justify-between">
           <div>
             <h2 className="text-headline-sm mb-2">Looking for your next commission?</h2>
-            <p className="text-ink-variant text-sm max-w-md">Browse public requests customers have published to the LILIRVE community and find your next project.</p>
+            <p className="text-ink-variant text-sm max-w-md">Browse public requests customers have published to the HRUNA community and find your next project.</p>
           </div>
           <LinkButton href="/designer/discover-requests" size="lg">Discover Requests</LinkButton>
         </div>

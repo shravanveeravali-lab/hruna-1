@@ -378,8 +378,8 @@ export default function DesignerOnboardingPage() {
   return (
     <div className="min-h-screen flex flex-col items-center py-16 px-6">
       <div className="w-full max-w-2xl">
-        <p className="font-display text-2xl text-center mb-2">LILIRVE</p>
-        <p className="text-center text-sm text-ink-variant mb-2">Your craft matters — you don't need a fashion degree to join LILIRVE.</p>
+        <p className="font-display text-2xl text-center mb-2">HRUNA</p>
+        <p className="text-center text-sm text-ink-variant mb-2">Your craft matters — you don't need a fashion degree to join HRUNA.</p>
         <p className="text-center text-xs text-outline mb-10">Show us what you create. Help customers discover your expertise.</p>
         <Stepper steps={STEPS} currentIndex={step} />
 
@@ -442,7 +442,7 @@ export default function DesignerOnboardingPage() {
             <div className="flex flex-col gap-8">
               <div>
                 <h1 className="text-headline-md mb-2">Tell us about your work</h1>
-                <p className="text-ink-variant text-sm">Choose what best describes what you create. You don't need a formal fashion degree to join LILIRVE.</p>
+                <p className="text-ink-variant text-sm">Choose what best describes what you create. You don't need a formal fashion degree to join HRUNA.</p>
               </div>
               <div>
                 <p className="text-label-md text-outline mb-3">WHAT DO YOU DO?</p>
@@ -497,7 +497,7 @@ export default function DesignerOnboardingPage() {
             <div className="flex flex-col gap-6">
               <div>
                 <h1 className="text-headline-md mb-2">Show us your work</h1>
-                <p className="text-ink-variant text-sm">Your portfolio helps customers understand your craft and helps LILIRVE verify your professional profile. Add at least 3 examples.</p>
+                <p className="text-ink-variant text-sm">Your portfolio helps customers understand your craft and helps HRUNA verify your professional profile. Add at least 3 examples.</p>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {onboarding.portfolioItems.map((item) => (
@@ -524,7 +524,7 @@ export default function DesignerOnboardingPage() {
 
               <label className="flex items-start gap-2 text-sm text-ink-variant p-4 rounded-md bg-surface-low">
                 <input type="checkbox" checked={ownershipAccepted} onChange={(e) => setOwnershipAccepted(e.target.checked)} className="mt-1" />
-                I confirm that the work submitted in this portfolio is my own work or work completed by my studio/team, and that I have the right to represent it on LILIRVE.
+                I confirm that the work submitted in this portfolio is my own work or work completed by my studio/team, and that I have the right to represent it on HRUNA.
               </label>
 
               <div>
@@ -563,7 +563,7 @@ export default function DesignerOnboardingPage() {
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-3 p-4 rounded-md bg-primary-container/40">
                 <ShieldCheck className="text-primary shrink-0" size={22} />
-                <p className="text-sm text-ink-variant">LILIRVE verifies who you are — this is separate from your professional work and never asks for a fashion degree.</p>
+                <p className="text-sm text-ink-variant">HRUNA verifies who you are — this is separate from your professional work and never asks for a fashion degree.</p>
               </div>
               <h1 className="text-headline-md mb-1">Identity verification</h1>
               <Field label="Date of birth" htmlFor="dob" required hint="Used only to confirm you meet the minimum age requirement — never shown publicly.">

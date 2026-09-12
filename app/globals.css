@@ -13,13 +13,13 @@
     @apply font-display text-ink;
   }
   :focus-visible {
-    outline: 2px solid #51434c;
+    outline: 2px solid #0A3323;
     outline-offset: 3px;
     border-radius: 4px;
   }
   ::selection {
-    background-color: #f8e1ee;
-    color: #51434c;
+    background-color: #F5E0DB;
+    color: #0A3323;
   }
 }
 
@@ -67,20 +67,24 @@
 
 /* Two overlapping band gradients at 0deg/90deg = a real gingham check — wide soft bands (not
    thin lines) so intersections read visibly darker, the actual hallmark of gingham fabric,
-   clearly distinct from the thin-line graph-paper variant below. */
+   clearly distinct from the thin-line graph-paper variant below.
+   Lines corrected from a rosy-brown tint to a neutral ink-tinted one — the colored lines were
+   part of what read as "yellow/peach gingham" rather than neutral vintage stationery; a low-
+   opacity neutral line (same dark ink used for text/borders everywhere else) reads as soft fabric
+   texture instead of a colored check. */
 .bg-gingham {
-  background-color: #F7F4D5;
+  background-color: #F8F6EE;
   background-image:
-    repeating-linear-gradient(0deg, rgba(211, 150, 140, 0.22) 0px, rgba(211, 150, 140, 0.22) 11px, transparent 11px, transparent 40px),
-    repeating-linear-gradient(90deg, rgba(211, 150, 140, 0.22) 0px, rgba(211, 150, 140, 0.22) 11px, transparent 11px, transparent 40px);
+    repeating-linear-gradient(0deg, rgba(10, 51, 35, 0.06) 0px, rgba(10, 51, 35, 0.06) 11px, transparent 11px, transparent 40px),
+    repeating-linear-gradient(90deg, rgba(10, 51, 35, 0.06) 0px, rgba(10, 51, 35, 0.06) 11px, transparent 11px, transparent 40px);
 }
 
-/* Thin grid lines = graph paper, moss-tinted on cream. */
+/* Thin grid lines = graph paper — same neutral ink tint as gingham above, just fainter/thinner. */
 .bg-graph-paper {
-  background-color: #F7F4D5;
+  background-color: #F8F6EE;
   background-image:
-    repeating-linear-gradient(0deg, rgba(131, 153, 88, 0.14) 0px, rgba(131, 153, 88, 0.14) 1px, transparent 1px, transparent 32px),
-    repeating-linear-gradient(90deg, rgba(131, 153, 88, 0.14) 0px, rgba(131, 153, 88, 0.14) 1px, transparent 1px, transparent 32px);
+    repeating-linear-gradient(0deg, rgba(10, 51, 35, 0.04) 0px, rgba(10, 51, 35, 0.04) 1px, transparent 1px, transparent 32px),
+    repeating-linear-gradient(90deg, rgba(10, 51, 35, 0.04) 0px, rgba(10, 51, 35, 0.04) 1px, transparent 1px, transparent 32px);
 }
 
 /* Subtle paper grain via an inline SVG feTurbulence data URI — no external request. */
@@ -102,8 +106,8 @@
   right: 0;
   height: 16px;
   background-image:
-    linear-gradient(135deg, var(--torn-color, #F7F4D5) 50%, transparent 50%),
-    linear-gradient(-135deg, var(--torn-color, #F7F4D5) 50%, transparent 50%);
+    linear-gradient(135deg, var(--torn-color, #F8F6EE) 50%, transparent 50%),
+    linear-gradient(-135deg, var(--torn-color, #F8F6EE) 50%, transparent 50%);
   background-size: 24px 16px;
   background-repeat: repeat-x;
   pointer-events: none;

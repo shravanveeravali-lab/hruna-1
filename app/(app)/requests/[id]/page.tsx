@@ -207,7 +207,7 @@ export default function RequestDetailsPage() {
                     <div className="flex items-center gap-2"><Calendar size={16} className="text-outline" /><span>{p.estimatedDays} days</span></div>
                   </div>
                   {p.notes && <p className="text-xs text-outline">{p.notes}</p>}
-                  <p className="text-xs text-outline">Payment and delivery are arranged directly with the designer — LILIRVE doesn't process payments.</p>
+                  <p className="text-xs text-outline">Payment and delivery are arranged directly with the designer — HRUNA doesn't process payments.</p>
                   {p.status !== "pending" ? (
                     <div className="pt-2 border-t border-outline-variant">
                       <StatusBadge status={p.status} />

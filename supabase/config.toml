@@ -254,11 +254,11 @@ otp_expiry = 3600
 # exchangeCodeForSession()). Two distinct templates because the two flows land on different pages
 # (/setup-password vs. /reset-password) and should read differently to the user.
 [auth.email.template.confirmation]
-subject = "Confirm your LILIRVE account"
+subject = "Confirm your HRUNA account"
 content_path = "./supabase/templates/confirmation.html"
 
 [auth.email.template.recovery]
-subject = "Reset your LILIRVE password"
+subject = "Reset your HRUNA password"
 content_path = "./supabase/templates/recovery.html"
 
 # Uncomment to customize email template

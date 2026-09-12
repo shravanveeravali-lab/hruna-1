@@ -256,7 +256,7 @@ export default function DesignerProjectWorkspacePage() {
       {project.status === "completed" && (
         <div className="mb-8 p-4 rounded-md bg-emerald-50 border border-emerald-200 text-sm text-emerald-800 flex items-center gap-2">
           <CheckCircle2 size={16} className="shrink-0" />
-          Completed on LILIRVE — confirmed by the customer{project.completedAt ? ` on ${formatDate(project.completedAt)}` : ""}.
+          Completed on HRUNA — confirmed by the customer{project.completedAt ? ` on ${formatDate(project.completedAt)}` : ""}.
         </div>
       )}
 
@@ -299,7 +299,7 @@ export default function DesignerProjectWorkspacePage() {
                 <p className="text-sm text-ink-variant">{project.additionalPreferences}</p>
               </div>
             )}
-            <p className="text-xs text-outline mt-4">Payment is arranged directly with the customer — LILIRVE doesn't process payments.</p>
+            <p className="text-xs text-outline mt-4">Payment is arranged directly with the customer — HRUNA doesn't process payments.</p>
           </section>
 
           <section>

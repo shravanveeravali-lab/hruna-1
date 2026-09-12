@@ -7,7 +7,7 @@ const sections: PolicySection[] = [
     heading: "What this covers",
     body: (
       <p>
-        LILIRVE doesn&apos;t currently have a public community feed or community-posting feature.
+        HRUNA doesn&apos;t currently have a public community feed or community-posting feature.
         These guidelines instead govern the places where people share or see each other&apos;s
         content today: designer studio profiles, portfolio and collection images, reviews, and
         direct messages between a customer and a designer. Your Fashion Diary is private and never
@@ -55,7 +55,7 @@ const sections: PolicySection[] = [
           <li>Reporting to appropriate authorities, where legally required or appropriate.</li>
         </ul>
         <p>
-          These actions are currently taken by LILIRVE administrators reviewing reported issues —
+          These actions are currently taken by HRUNA administrators reviewing reported issues —
           see{" "}
           <Link href="/reporting-and-disputes" className="text-primary hover:underline">
             Reporting, Complaints &amp; Disputes
@@ -90,7 +90,7 @@ export default function CommunityGuidelinesPage() {
       intro={
         <p>
           These guidelines apply wherever people share or see each other&apos;s content on
-          LILIRVE — designer studio pages, portfolios, reviews, and direct messages.
+          HRUNA — designer studio pages, portfolios, reviews, and direct messages.
         </p>
       }
       sections={sections}

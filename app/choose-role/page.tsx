@@ -9,9 +9,9 @@ export default function ChooseRolePage() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6 py-16">
-      <p className="font-display text-2xl mb-2">LILIRVE</p>
+      <p className="font-display text-2xl mb-2">HRUNA</p>
       <p className="text-label-md text-outline mb-10 text-center">YOUR ACCOUNT IS READY</p>
-      <h1 className="text-headline-md text-center max-w-md mb-12">How would you like to use LILIRVE?</h1>
+      <h1 className="text-headline-md text-center max-w-md mb-12">How would you like to use HRUNA?</h1>
 
       <div className="grid sm:grid-cols-2 gap-6 w-full max-w-2xl">
         <button
@@ -46,7 +46,7 @@ export default function ChooseRolePage() {
       </div>
 
       <p className="text-xs text-outline mt-10 text-center max-w-sm">
-        You can always set up the other side of LILIRVE later from your account settings.
+        You can always set up the other side of HRUNA later from your account settings.
       </p>
     </div>
   );

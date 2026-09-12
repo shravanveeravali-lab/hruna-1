@@ -47,7 +47,7 @@ function LoginForm() {
   return (
     <>
       <p className="text-label-md text-outline mb-2">WELCOME BACK</p>
-      <h1 className="text-headline-md mb-8">Sign in to LILIRVE</h1>
+      <h1 className="text-headline-md mb-8">Sign in to HRUNA</h1>
       <form onSubmit={onSubmit} className="flex flex-col gap-5" noValidate>
         <Field label="Email address" htmlFor="email" required error={error && !form.password ? error : undefined}>
           <Input
@@ -76,7 +76,7 @@ function LoginForm() {
         </Button>
       </form>
       <p className="text-sm text-ink-variant mt-8 text-center">
-        New to LILIRVE?{" "}
+        New to HRUNA?{" "}
         <Link href="/create-account" className="text-primary font-medium hover:underline">
           Create an account
         </Link>

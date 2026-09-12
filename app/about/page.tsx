@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <ContentPage eyebrow="ABOUT" title="Where Vision Meets Craft">
       <p>
-        LILIRVE connects you with verified fashion designers, tailors and boutiques to bring your
+        HRUNA connects you with verified fashion designers, tailors and boutiques to bring your
         dream garment to life — from private commission to final fitting.
       </p>
       <p>
@@ -17,7 +17,7 @@ export default function AboutPage() {
         understand it, and watch it come to life — start to finish, in one place.
       </p>
       <p>Where vision meets craft — a private atelier for every fashion request.</p>
-      <p className="text-xs text-outline pt-4 border-t border-outline-variant">LILIRVE v{packageJson.version}</p>
+      <p className="text-xs text-outline pt-4 border-t border-outline-variant">HRUNA v{packageJson.version}</p>
     </ContentPage>
   );
 }

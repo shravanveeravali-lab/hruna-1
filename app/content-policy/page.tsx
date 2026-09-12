@@ -7,9 +7,9 @@ const sections: PolicySection[] = [
     heading: "You own your content",
     body: (
       <p>
-        You retain ownership of the content you create and upload to LILIRVE — designs,
+        You retain ownership of the content you create and upload to HRUNA — designs,
         photographs, portfolio work, fashion concepts, diary entries, and any other creative work.
-        LILIRVE does not claim ownership of your designs, photographs, artwork, fashion concepts,
+        HRUNA does not claim ownership of your designs, photographs, artwork, fashion concepts,
         or other creative work.
       </p>
     ),
@@ -27,10 +27,10 @@ const sections: PolicySection[] = [
   },
   {
     id: "license",
-    heading: "The limited license you grant LILIRVE",
+    heading: "The limited license you grant HRUNA",
     body: (
       <p>
-        To operate the platform, you grant LILIRVE a limited, non-exclusive license to host,
+        To operate the platform, you grant HRUNA a limited, non-exclusive license to host,
         store, process, and display your uploaded content as needed — for example, showing your
         portfolio on your studio page, or displaying a review you&apos;ve written. This license
         exists only to let the platform function; it doesn&apos;t transfer ownership.
@@ -53,7 +53,7 @@ const sections: PolicySection[] = [
     heading: "Infringement & removal",
     body: (
       <p>
-        If you believe content on LILIRVE infringes your intellectual property rights, let us
+        If you believe content on HRUNA infringes your intellectual property rights, let us
         know and we&apos;ll review it. We may remove content that appears to infringe another
         person&apos;s rights.{" "}
         <strong>[FORMAL IP COMPLAINT CONTACT/PROCESS TO BE INSERTED]</strong> — in the meantime, use
@@ -73,7 +73,7 @@ export default function ContentPolicyPage() {
       lastUpdated="September 10, 2026"
       intro={
         <p>
-          LILIRVE is built around designers&apos; and customers&apos; creative work — this policy
+          HRUNA is built around designers&apos; and customers&apos; creative work — this policy
           explains ownership, responsibility, and how infringement is handled.
         </p>
       }

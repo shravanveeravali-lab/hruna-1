@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { validatePasswordConfirmation } from "@/lib/auth/password";
 import { useToast } from "@/hooks/use-toast";
 
-// Settings > Security's real Change Password card — replaces the old stale "LILIRVE uses
+// Settings > Security's real Change Password card — replaces the old stale "HRUNA uses
 // passwordless email sign-in" copy now that the app is on real Supabase email+password auth.
 // Posts to app/api/auth/change-password/route.ts, which reauthenticates with the current password
 // before accepting a new one.
@@ -52,7 +52,7 @@ export function ChangePasswordCard() {
   return (
     <div className="p-5 rounded-md border border-outline-variant">
       <p className="text-sm font-medium mb-1">Change Password</p>
-      <p className="text-xs text-ink-variant mb-5">Update the password you use to sign in to LILIRVE.</p>
+      <p className="text-xs text-ink-variant mb-5">Update the password you use to sign in to HRUNA.</p>
       <form onSubmit={onSubmit} className="flex flex-col gap-4 max-w-sm" noValidate>
         <Field label="Current password" htmlFor="currentPassword" required error={errors.currentPassword}>
           <Input

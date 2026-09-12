@@ -53,7 +53,7 @@ export function DeleteAccountSection() {
         <div>
           <p className="text-sm font-medium">Delete Account</p>
           <p className="text-xs text-ink-variant mt-1 max-w-sm">
-            Permanently delete your LILIRVE account. This can't be undone. Accounts with existing
+            Permanently delete your HRUNA account. This can't be undone. Accounts with existing
             requests, projects, or other activity can't be deleted automatically — contact support
             instead.
           </p>
@@ -66,7 +66,7 @@ export function DeleteAccountSection() {
       <Modal open={open} onClose={close} title="Delete your account?">
         <div className="flex flex-col gap-4">
           <p className="text-sm text-ink-variant">
-            This permanently deletes your LILIRVE account and everything tied only to it. This
+            This permanently deletes your HRUNA account and everything tied only to it. This
             cannot be undone.
           </p>
           <Field label={`Type "${CONFIRM_PHRASE}" to confirm`} htmlFor="confirmDelete" error={error}>

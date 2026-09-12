@@ -21,13 +21,13 @@ export default async function SetupPasswordPage() {
 
   return (
     <AuthShell
-      image="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1200&q=80"
-      imageAlt="A designer at work in their studio"
-      quote="“The last step before LILIRVE became mine — choosing a password felt like signing my own name.”"
+      image="/images/stitch/couture-gown-atelier-crop.png"
+      imageAlt="A hand-painted couture gown sketch on an atelier desk"
+      quote="“The last step before HRUNA became mine — choosing a password felt like signing my own name.”"
     >
       <PasswordForm
         heading="Create your password"
-        description="Your email is verified. Set a password to finish creating your LILIRVE account."
+        description="Your email is verified. Set a password to finish creating your HRUNA account."
         submitLabel="Create account"
         onSuccessRedirect="/choose-role"
       />

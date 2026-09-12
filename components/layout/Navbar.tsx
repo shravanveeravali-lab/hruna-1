@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Search, Bell, MessageCircle, Menu, X, Heart } from "lucide-react";
 import { Avatar } from "@/components/ui/Badge";
 import { cn } from "@/lib/utils";
@@ -22,12 +22,34 @@ export function Navbar({ name, avatar }: { name: string; avatar: string }) {
   const displayName = name || "Your Profile";
   const avatarUrl = avatar;
 
+  // Lock the page behind the mobile menu — otherwise the underlying content stays scrollable
+  // while the overlay is open. Restored on close/unmount so this never leaks into a stuck state.
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
+
+  // Escape closes the menu, same as the visible × button.
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
   return (
+    <>
     <header className="sticky top-0 z-40 bg-surface/85 backdrop-blur-md border-b border-primary/10">
       <div className="container-editorial flex items-center justify-between h-20">
         <div className="flex items-center gap-10">
           <Link href="/home" className="font-display text-2xl tracking-wide text-ink">
-            LILIRVE
+            HRUNA
           </Link>
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
@@ -83,31 +105,42 @@ export function Navbar({ name, avatar }: { name: string; avatar: string }) {
           <Menu size={22} />
         </button>
       </div>
-
-      {open && (
-        <div className="fixed inset-0 z-50 bg-surface flex flex-col lg:hidden animate-[fadeIn_0.15s_ease]">
-          <div className="flex items-center justify-between h-20 container-editorial">
-            <span className="font-display text-2xl">LILIRVE</span>
-            <button aria-label="Close menu" onClick={() => setOpen(false)} className="p-2 text-ink-variant">
-              <X size={22} />
-            </button>
-          </div>
-          <nav className="flex flex-col gap-1 px-6 pt-4">
-            {[...navLinks, { href: "/saved", label: "Saved Items" }, { href: "/messages", label: "Messages" }, { href: "/notifications", label: "Notifications" }, { href: "/profile", label: "Profile & Settings" }].map(
-              (link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="py-4 text-headline-sm border-b border-outline-variant"
-                >
-                  {link.label}
-                </Link>
-              )
-            )}
-          </nav>
-        </div>
-      )}
     </header>
+
+    {/* Rendered as a sibling of <header>, not a descendant — the header has backdrop-blur-md
+        (backdrop-filter), which per spec makes it a containing block for any `position: fixed`
+        descendant. A fixed child there resolves against the header's own ~80px box instead of the
+        viewport, so its overflowing content bled straight into the page below it. Root cause, not
+        a stacking/z-index issue — moving this out from under the header is the actual fix. */}
+    {open && (
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation"
+        className="fixed inset-0 z-50 bg-surface flex flex-col lg:hidden animate-[fadeIn_0.15s_ease]"
+      >
+        <div className="flex items-center justify-between h-20 container-editorial">
+          <span className="font-display text-2xl">HRUNA</span>
+          <button aria-label="Close menu" onClick={() => setOpen(false)} className="p-3 -mr-3 text-ink-variant">
+            <X size={22} />
+          </button>
+        </div>
+        <nav className="flex flex-col gap-1 px-6 pt-4 overflow-y-auto">
+          {[...navLinks, { href: "/saved", label: "Saved Items" }, { href: "/messages", label: "Messages" }, { href: "/notifications", label: "Notifications" }, { href: "/profile", label: "Profile & Settings" }].map(
+            (link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="py-4 text-headline-sm border-b border-outline-variant"
+              >
+                {link.label}
+              </Link>
+            )
+          )}
+        </nav>
+      </div>
+    )}
+    </>
   );
 }

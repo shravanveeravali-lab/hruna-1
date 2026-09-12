@@ -71,7 +71,7 @@ export default function VerificationPendingPage() {
       <p className="text-label-md text-outline mb-3">
         {verification.overallStatus === "approved" ? "APPROVED" : "UNDER REVIEW"}
       </p>
-      <h1 className="text-headline-md max-w-md mb-8">Your LILIRVE profile is under review</h1>
+      <h1 className="text-headline-md max-w-md mb-8">Your HRUNA profile is under review</h1>
 
       <div className="w-full max-w-sm flex flex-col gap-3 mb-10 text-left">
         {checklist.map((item) => (

@@ -12,8 +12,8 @@ export default function VerifyEmailPage({
 }) {
   return (
     <AuthShell
-      image="https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=1200&q=80"
-      imageAlt="Fabric swatches and sketches laid out on a design studio table"
+      image="/images/stitch/dress-form-draping.png"
+      imageAlt="A dress form sketch draped in flowing blush and gold fabric, atelier study"
       quote="“One click, and my design world opened up.”"
     >
       <ResendPanel email={searchParams.email ?? ""} initialError={searchParams.error} />

@@ -45,7 +45,7 @@ const MORE_LINKS = [
   { href: "/saved", label: "Favourites", icon: Heart },
   { href: "/help", label: "Help Center", icon: HelpCircle },
   { href: "/support", label: "Contact Support", icon: Mail },
-  { href: "/about", label: "About LILIRVE", icon: Info },
+  { href: "/about", label: "About HRUNA", icon: Info },
 ];
 
 const LEGAL_LINKS = [

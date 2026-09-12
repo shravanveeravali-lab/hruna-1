@@ -14,7 +14,7 @@ const sections: PolicySection[] = [
         <li>Copyright or intellectual property violations.</li>
         <li>Review abuse or manipulation.</li>
         <li>A disagreement about a project.</li>
-        <li>A violation of any LILIRVE policy.</li>
+        <li>A violation of any HRUNA policy.</li>
         <li>Privacy violations.</li>
       </ul>
     ),
@@ -25,10 +25,10 @@ const sections: PolicySection[] = [
     body: (
       <>
         <p>
-          Being transparent about where this stands: LILIRVE doesn&apos;t yet have a self-service
+          Being transparent about where this stands: HRUNA doesn&apos;t yet have a self-service
           &ldquo;Report&rdquo; button on reviews, messages, or profiles, and there isn&apos;t
           currently a page where you can file or track a dispute yourself. Disputes today are
-          handled internally — a LILIRVE administrator reviews the situation, tracks it through a
+          handled internally — a HRUNA administrator reviews the situation, tracks it through a
           fixed process (open → under review → resolved → closed), and can add notes as it&apos;s
           worked through.
         </p>
@@ -36,7 +36,7 @@ const sections: PolicySection[] = [
           To raise any of the issues above, use the{" "}
           <Link href="/help" className="text-primary hover:underline">Help Center</Link> or{" "}
           <Link href="/support" className="text-primary hover:underline">Contact Support</Link>{" "}
-          for now. We&apos;ll route it internally. As LILIRVE grows, we intend to build a proper
+          for now. We&apos;ll route it internally. As HRUNA grows, we intend to build a proper
           self-service reporting and dispute-tracking experience.
         </p>
       </>
@@ -58,7 +58,7 @@ const sections: PolicySection[] = [
     heading: "What happens after you report something",
     body: (
       <p>
-        A LILIRVE administrator reviews what&apos;s reported and may take any of the actions
+        A HRUNA administrator reviews what&apos;s reported and may take any of the actions
         described in the{" "}
         <Link href="/account-policy" className="text-primary hover:underline">
           Account Suspension &amp; Termination Policy
@@ -79,7 +79,7 @@ export default function ReportingAndDisputesPage() {
       eyebrow="LEGAL"
       title="Reporting, Complaints & Disputes"
       lastUpdated="September 10, 2026"
-      intro={<p>How to raise a concern with LILIRVE, and how it&apos;s handled today.</p>}
+      intro={<p>How to raise a concern with HRUNA, and how it&apos;s handled today.</p>}
       sections={sections}
     />
   );
